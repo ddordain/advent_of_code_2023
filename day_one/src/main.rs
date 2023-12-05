@@ -76,9 +76,9 @@ fn main() {
     //     println!("{}", v);
     // }
     let vec = convert_words_to_digits(lines).unwrap();
-    for v in &vec {
-        println!("{}", v);
-    }
+    // for v in &vec {
+    //     println!("{}", v);
+    // }
     let vec = convert_vec_string_to_digit_string(vec).unwrap();
     // for v in &vec {
     //     println!("{}", v);
