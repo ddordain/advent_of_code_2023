@@ -45,6 +45,7 @@ fn convert_words_to_digits(vec: Vec<String>) -> Option<Vec<String>> {
         (Regex::new(r"eightwo").unwrap(), "82"),
         (Regex::new(r"nineight").unwrap(), "98"),
         (Regex::new(r"eighthree").unwrap(), "83"),
+        (Regex::new(r"sevenine").unwrap(), "79"),
         (Regex::new(r"one").unwrap(), "1"),
         (Regex::new(r"two").unwrap(), "2"),
         (Regex::new(r"three").unwrap(), "3"),
