@@ -36,25 +36,17 @@ fn transform_strings_to_u8(vec: Vec<String>) -> Option<Vec<u8>> {
     Some(vec_u8)
 }
 
-//this regex trick assumes no twoneight ^^ XD
-//but i was lucky :D
 fn convert_words_to_digits(vec: Vec<String>) -> Option<Vec<String>> {
     let patterns = [
-        (Regex::new(r"twone").unwrap(), "21"),
-        (Regex::new(r"oneight").unwrap(), "18"),
-        (Regex::new(r"eightwo").unwrap(), "82"),
-        (Regex::new(r"nineight").unwrap(), "98"),
-        (Regex::new(r"eighthree").unwrap(), "83"),
-        (Regex::new(r"sevenine").unwrap(), "79"),
-        (Regex::new(r"one").unwrap(), "1"),
-        (Regex::new(r"two").unwrap(), "2"),
-        (Regex::new(r"three").unwrap(), "3"),
-        (Regex::new(r"four").unwrap(), "4"),
-        (Regex::new(r"five").unwrap(), "5"),
-        (Regex::new(r"six").unwrap(), "6"),
-        (Regex::new(r"seven").unwrap(), "7"),
-        (Regex::new(r"eight").unwrap(), "8"),
-        (Regex::new(r"nine").unwrap(), "9"),
+        (Regex::new(r"one").unwrap(), "o1e"),
+        (Regex::new(r"two").unwrap(), "t2o"),
+        (Regex::new(r"three").unwrap(), "t3e"),
+        (Regex::new(r"four").unwrap(), "f4r"),
+        (Regex::new(r"five").unwrap(), "f5e"),
+        (Regex::new(r"six").unwrap(), "s6x"),
+        (Regex::new(r"seven").unwrap(), "s7n"),
+        (Regex::new(r"eight").unwrap(), "e8t"),
+        (Regex::new(r"nine").unwrap(), "n9e"),
     ];
 
     let vec_replace = vec
